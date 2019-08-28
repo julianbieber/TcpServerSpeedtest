@@ -12,7 +12,7 @@ fn handle_client(mut stream: TcpStream, data: &[u8]) -> std::io::Result<usize> {
 fn main() -> std::io::Result<()>{
 
 
-    let listener = TcpListener::bind("127.0.0.1:1111")?;
+    let listener = TcpListener::bind("0.0.0.0:1111")?;
 
     // accept connections and process them serially
     for stream in listener.incoming() {
